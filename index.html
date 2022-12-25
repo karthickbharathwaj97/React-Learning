@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Using javascript to manipulate DOM -start -->
+    <script>
+      //   const root = document.getElementById("root");
+      //   root.innerHTML += "Hello React";
+      //   const h1Element = document.createElement("h1");
+      //   console.log(h1Element);
+      //   h1Element.innerHTML += "Hello React Dev";
+      //   document.getElementById("root").appendChild(h1Element);
+    </script>
+    <!-- Using javascript to manipulate DOM -end -->
+    <!-- React CDN Links -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <!-- Using React to manipulate DOM -->
+    <script>
+      const h1Element = React.createElement(
+        "h1",
+        { id: "Container" },
+        "Hello Guys"
+      );
+      const h2Element = React.createElement(
+        "h2",
+        { id: "Container" },
+        "This is H2"
+      );
+      const divElement = React.createElement("div", {}, [h1Element, h2Element]);
+      const rootElement = document.getElementById("root");
+      const root = ReactDOM.createRoot(rootElement);
+      console.log(root);
+      root.render(divElement);
+    </script>
+  </body>
+</html>

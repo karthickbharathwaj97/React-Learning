@@ -1,0 +1,29 @@
+What is Emmet?
+Emmet is a plugin which is used to develop HTML and CSS in a fast manner  which is used in many of the code editors and does have more short keys to create the html tags
+Difference between a Library and Framework?
+Library is not an independently executable unit. It is like a simple functionality added to a web page. just like that it is an additional module used to run the application and the  application is  not  dependent on the Library.
+On the contrast Framework is an independently executable unit. where we can be creating all of the functionalities of an application with the help of the certain procedures mentioned in the frame work
+What is CDN? Why do we use it?
+CDN-Content delivery networks or content distributed networks  are some distributed servers which are used to access the cached internet content which is provided from the nearest location of the user to speed up the delivery of the content.
+The primary goal of a CDN is to improve web performance by reducing the time needed to send content and rich media to users.
+
+Why is React known as React?
+React is a JavaScript library for building interactive user interfaces. It is an open-source frontend library developed and maintained by Facebook. In the MVC architecture, it is responsible for the view layer of our application i.e rendering our user interface and updating the UI whenever the user Reacts or changes the view.
+What is crossOrigin in script tag?
+The crossorigin attribute provides support for CORS, defining how the element handles cross-   origin requests.  
+
+Cross-Origin Resource Sharing (CORS) is a security feature implemented by web browsers that blocks web pages from making requests to a different domain than the one that served the web page. This is done to prevent malicious websites from making requests to our  site on behalf of the user, which could potentially compromise their data or security.
+When a web page makes a request to a server, the browser checks the response headers to see if the server has specified that the domain is allowed to make the request. If the domain is not allowed, the browser blocks the request and the server will not receive it.
+What is difference between React and ReactDOM?
+As React creates a visual representation of our UI. With the help of React DOM library we can perform DOM manipulation based on that Virtual DOM. With ReactDOM we can write React for native applications. 
+What is difference between react.development.js and react.production.js files via CDN?
+Both are the CDN files of react js where the development.js file is not optimized as production.js . compared to development cdn prod cdn will do better in performance
+What is async and defer? 
+Async and defer are the attributes which are used in script tags to change the flow of the run of the script tags.
+If you have included async in your script tag
+<script async src="...></script>
+The HTML parsing will continue until the script is fetched.normaly the html parsing stops when a script tag comes in it works in a synchronous manner. but if we use async the browser continues html parsing until script is fetched the html parsing stops and the script parsing will happen.
+
+In case of defer
+<script defer src="...></script>
+Once the HTML parsing is totally completed the browser will asynchronously fetch the scripts during the html parsing but it waits for the html parsing to be completed and the at last it does the script parsing.
