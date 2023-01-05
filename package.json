@@ -1,0 +1,34 @@
+{
+  "name": "01-react",
+  "version": "1.0.0",
+  "description": "This is for react development ",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/depixeler/Day-01-React.git"
+  },
+  "author": "Karthick Bharathwaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/depixeler/Day-01-React/issues"
+  },
+  "homepage": "https://github.com/depixeler/Day-01-React#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
