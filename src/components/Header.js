@@ -1,5 +1,5 @@
 import Logo from "../../assets/logo/Logo1.png";
-import React from "react";
+import { useState } from "react";
 import "../App.css";
 const LogoImg = () => {
   return (
@@ -10,6 +10,7 @@ const LogoImg = () => {
 };
 
 function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className="navbar">
       <LogoImg />
@@ -18,6 +19,31 @@ function Header() {
           <li>Home</li>
           <li>About</li>
           <li>Login</li>
+          {isLoggedIn ? (
+            <>
+              <li>
+                <button
+                  onClick={() => {
+                    setIsLoggedIn(false);
+                  }}
+                >
+                  Logout
+                </button>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <button
+                  onClick={() => {
+                    setIsLoggedIn(true);
+                  }}
+                >
+                  Login
+                </button>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </div>

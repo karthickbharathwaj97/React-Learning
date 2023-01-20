@@ -1,5 +1,5 @@
 //Using react to manipulate dom
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 
 import "./App.css";
