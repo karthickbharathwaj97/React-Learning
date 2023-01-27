@@ -1,5 +1,6 @@
 import Logo from "../../assets/logo/Logo1.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 const LogoImg = () => {
   return (
@@ -16,9 +17,29 @@ function Header() {
       <LogoImg />
       <div className="nav-elements">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Login</li>
+          <li>
+            <Link to="/" className="linkTag">
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/about" className="linkTag">
+              About
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/contact" className="linkTag">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/cart" className="linkTag">
+              Cart
+            </Link>
+          </li>
+
           {isLoggedIn ? (
             <>
               <li>

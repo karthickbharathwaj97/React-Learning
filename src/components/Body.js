@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { restaurantList } from "../../constants";
 import RestaurantCard from "./RestaurantCard";
+import ShimmerUI from "./ShimmerUI";
 
 function Body() {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -44,7 +46,7 @@ function Body() {
     <div className="restaurant-body">
       {loading ? (
         <>
-          <h1>Its loading...</h1>
+          <ShimmerUI />
         </>
       ) : (
         <>
@@ -75,7 +77,11 @@ function Body() {
             ) : (
               <>
                 {filteredRestaurants.map((ele) => {
-                  return <RestaurantCard {...ele.data} key={ele.data.id} />;
+                  return (
+                    <Link key={ele.data.id} to={`restaurant/${ele.data.id}`}>
+                      <RestaurantCard {...ele.data} />;
+                    </Link>
+                  );
                 })}
               </>
             )}
