@@ -15,6 +15,7 @@ import CartPage from "./components/CartPage";
 import RestaurantCard from "./components/RestaurantCard";
 import RestaurantPage from "./components/RestaurantPage";
 import Login from "./components/Login";
+import Profile from "./components/Profile";
 
 //Making an app layout which contains header , body and footer
 const AppLayout = () => {
@@ -39,6 +40,12 @@ const Router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs />,
+        children: [
+          {
+            path: "profile",
+            element: <Profile />,
+          },
+        ],
       },
       {
         path: "/contact",
