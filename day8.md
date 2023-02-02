@@ -1,6 +1,6 @@
 ● How do you create Nested Routes react-router-dom configuration
 
--> We use to add children to that parent route comoponent.
+-> We use to add children to that parent route component.
 
 eg.
 
