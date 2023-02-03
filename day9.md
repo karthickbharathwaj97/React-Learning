@@ -73,8 +73,7 @@ Advantages:
 - Client side caching improved by updating only those parts of application that has changed.
 
 Disadvantages:
-- Code splitting requires downloading of data after the page initializes. If there is no internet connection, there is no way 
-to load additional modules. We have to prepare some message to the user. We have to introduce loading indicators or develop 
+- Code splitting requires downloading of data after the page initializes. If there is no internet connection, there is no way to load additional modules. We have to prepare some message to the user. - We have to introduce loading indicators or develop 
 some strategies for efficient loading.
 - We need to write additional logic to load modules when required.
 - Slight delay in loading the code chunk for the first time.
