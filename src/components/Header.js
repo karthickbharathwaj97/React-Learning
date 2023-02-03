@@ -2,6 +2,7 @@ import Logo from "../../assets/logo/Logo1.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import useOnline from "../utils/useOnline";
 const LogoImg = () => {
   return (
     <a href="/">
@@ -12,6 +13,7 @@ const LogoImg = () => {
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const isOnline = useOnline();
   return (
     <div className="navbar">
       <LogoImg />
@@ -35,10 +37,16 @@ function Header() {
             </Link>
           </li>
           <li>
+            <Link to="/insta-mart" className="linkTag">
+              InstaMart
+            </Link>
+          </li>
+          <li>
             <Link to="/cart" className="linkTag">
               Cart
             </Link>
           </li>
+          <li>{isOnline ? "🟢" : "🔴"}</li>
 
           {isLoggedIn ? (
             <>

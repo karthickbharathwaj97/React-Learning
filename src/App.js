@@ -1,5 +1,5 @@
 //Using react to manipulate dom
-import React, { useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 
 import "./App.css";
@@ -16,6 +16,10 @@ import RestaurantCard from "./components/RestaurantCard";
 import RestaurantPage from "./components/RestaurantPage";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import ShimmerUI from "./components/ShimmerUI";
+
+//lazy loading instamart
+const InstaMart = lazy(() => import("./components/InstaMart"));
 
 //Making an app layout which contains header , body and footer
 const AppLayout = () => {
@@ -60,8 +64,16 @@ const Router = createBrowserRouter([
         element: <RestaurantPage />,
       },
       {
-        path: "/login/",
+        path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/insta-mart",
+        element: (
+          <Suspense fallback={<ShimmerUI />}>
+            <InstaMart />
+          </Suspense>
+        ),
       },
     ],
   },
